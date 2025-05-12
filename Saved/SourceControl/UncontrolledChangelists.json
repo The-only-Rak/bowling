@@ -1,0 +1,40 @@
+{
+	"version": 1,
+	"changelists": [
+		{
+			"guid": "00000000000000000000000000000000",
+			"description": "Default Uncontrolled Changelist",
+			"files": [
+				"E:/bowling/Content/Empty.umap",
+				"E:/bowling/Content/Models/Ball.uasset",
+				"E:/bowling/Content/_GENERATED/wertw/Box_8A88D237.uasset",
+				"E:/bowling/Content/Models/Stick.uasset",
+				"E:/bowling/Content/_GENERATED/wertw/Box_7AD0315C.uasset",
+				"E:/bowling/Content/Models/Ramp.uasset",
+				"E:/bowling/Content/Levels/L_Main.umap",
+				"E:/bowling/Content/Materials/M_Stick.uasset",
+				"E:/bowling/Content/Materials/M_Ball.uasset",
+				"E:/bowling/Content/Blueprints/BP_Player.uasset",
+				"E:/bowling/Content/Inputs/MC_Default.uasset",
+				"E:/bowling/Content/Inputs/IA_Move.uasset",
+				"E:/bowling/Content/Inputs/IA_Ok.uasset",
+				"E:/bowling/Content/UI/WB_MainGame.uasset",
+				"E:/bowling/Content/UI/NewWidgetPreview.uasset",
+				"E:/bowling/Content/Blueprints/GM_Base.uasset",
+				"E:/bowling/Content/Blueprints/BP_Ball.uasset",
+				"E:/bowling/Content/Materials/MI_Indicator.uasset",
+				"E:/bowling/Content/Blueprints/BP_Sticks.uasset",
+				"E:/UE_5.5/Engine/Plugins/Interchange/Assets/Content/gltf/M_Default.uasset",
+				"E:/bowling/Content/Models/StickMaterial.uasset",
+				"E:/bowling/Content/Models/Ucupaint_Plane_Color.uasset",
+				"E:/bowling/Content/Materials/M_Example.uasset",
+				"E:/bowling/Content/Materials/MI_Example.uasset",
+				"E:/bowling/Content/Materials/M_I.uasset",
+				"E:/bowling/Content/UI/NewWidgetBlueprint.uasset",
+				"E:/bowling/Content/Models/Sphere_E02BAD4F.uasset",
+				"E:/bowling/Content/Models/Box_8A88D237.uasset",
+				"E:/bowling/Content/Models/Box_7AD0315C.uasset"
+			]
+		}
+	]
+}
