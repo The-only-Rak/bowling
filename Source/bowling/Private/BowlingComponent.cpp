@@ -50,9 +50,9 @@ void UBowlingComponent::TickComponent(float DeltaTime, ELevelTick TickType, FAct
 
 void UBowlingComponent::MoveRight(float AxisValue, float Delta)
 {
-	FVector vec = GetRightVector();
-	vec.Normalize();
-	Location += vec * ControlSensitivity * Delta * AxisValue;
+	FVector Vec = GetRightVector();
+	Vec.Normalize();
+	Location += Vec * ControlSensitivity * Delta * AxisValue;
 	FVector Max = GetComponentLocation()-GetRightVector() * Distance;
 	FVector Min = GetComponentLocation() + GetRightVector() * Distance;
 	Location.X = FMath::Clamp(Location.X,FMath::Min(Min.X,Max.X),FMath::Max(Min.X,Max.X));
@@ -109,10 +109,14 @@ void UBowlingComponent::Start()
 		UE_LOG(LogTemp,Warning,TEXT("Ball not spawned"));
 		return;
 	}
-	auto primitive = ActorBall->FindComponentByClass<UPrimitiveComponent>();
-	if (IsValid(primitive) && primitive->IsSimulatingPhysics())
+	auto Primitive = ActorBall->FindComponentByClass<UPrimitiveComponent>();
+	if (IsValid(Primitive) && Primitive->IsSimulatingPhysics())
 	{
-		primitive->AddImpulse(Indicator->GetForwardVector() * Ball.BallImpulse, NAME_None, true);
+		FTimerHandle tmp;
+		GetWorld()->GetTimerManager().SetTimer(tmp,FTimerDelegate::CreateLambda([Primitive,Ball,direction = Indicator->GetForwardVector()]()
+		{
+			Primitive->AddImpulse(direction * Ball.BallImpulse, NAME_None, true);
+		}),0.1,false);
 	} 
 }
 

@@ -15,15 +15,15 @@ void UStickStackComponent::BeginPlay()
 
 int UStickStackComponent::GetScore()
 {
-	int ret = 0;
+	int Ret = 0;
 	TArray<UStaticMeshComponent*> components;
 	GetOwner()->GetComponents<UStaticMeshComponent>(components);
 	for (auto component:components)
 	{
-		const auto rotation = component->GetComponentRotation();
-		const auto broken =  FMath::Abs(rotation.Pitch) + FMath::Abs(rotation.Roll) > 90 || component->GetComponentLocation().Z < -250;
-		ret += broken?1:0;
+		const auto Rotation = component->GetComponentRotation();
+		const auto Broken =  FMath::Abs(Rotation.Pitch) + FMath::Abs(Rotation.Roll) > 90 || component->GetComponentLocation().Z < -250;
+		Ret += Broken?1:0;
 	}
-	return ret;
+	return Ret;
 	
 }
